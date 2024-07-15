@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BaGetter.Web</name>
+    </assembly>
+    <members>
+        <member name="T:BaGetter.Web.PackageContentController">
+            <summary>
+            The Package Content resource, used to download content from packages.
+            See: https://docs.microsoft.com/nuget/api/package-base-address-resource
+            </summary>
+        </member>
+        <member name="M:BaGetter.Web.PackageContentController.DownloadPackageAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Download a specific package version.
+            </summary>
+            <param name="id">Package id, e.g. "BaGetter.Protocol".</param>
+            <param name="version">Package version, e.g. "1.2.0".</param>
+            <param name="cancellationToken">A token to cancel the task.</param>
+            <returns>The requested package in an octet stream, or 404 not found if the package isn't found.</returns>
+        </member>
+        <member name="T:BaGetter.Web.PackageMetadataController">
+            <summary>
+            The Package Metadata resource, used to fetch packages' information.
+            See: https://docs.microsoft.com/en-us/nuget/api/registration-base-url-resource
+            </summary>
+        </member>
+        <member name="T:BaGetter.Web.ServiceIndexController">
+            <summary>
+            The NuGet Service Index. This aids NuGet client to discover this server's services.
+            </summary>
+        </member>
+        <member name="M:BaGetter.Web.Extensions.HtmlHelperExtensions.AddReleaseMetaTags(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper)">
+            <remarks>Based on: <see href="https://github.com/NuGet/NuGetGallery/blob/main/src/NuGetGallery/Views/Shared/Gallery/Layout.cshtml"/></remarks>
+        </member>
+        <member name="P:BaGetter.Web.Helper.ApplicationVersion.Present">
+            <summary>
+            Indicates if all version information was given during build process.
+            </summary>
+        </member>
+        <member name="P:BaGetter.Web.Helper.ApplicationVersion.Version">
+            <summary>
+            The version e.g. <c>7.8.9</c>
+            </summary>
+        </member>
+        <member name="P:BaGetter.Web.Helper.ApplicationVersion.InformationalVersion">
+            <summary>
+            The version with additional information e.g. <c>7.8.9+commitHash</c>
+            </summary>
+        </member>
+        <member name="T:BaGetter.Web.Helper.ApplicationVersionHelper">
+            <remarks>Based on: <see href="https://github.com/NuGet/NuGetGallery/tree/main/src/NuGetGallery/Infrastructure/ApplicationVersionHelper.cs"/></remarks>
+        </member>
+        <member name="T:BaGetter.Web.OperationCancelledMiddleware">
+            <summary>
+            Captures <see cref="T:System.OperationCanceledException" /> and converts to HTTP 409 response.
+            </summary>
+            <remarks>Based off: <see href="https://github.com/aspnet/AspNetCore/blob/28157e62597bf0e043bc7e937e44c5ec81946b83/src/Middleware/Diagnostics/src/DeveloperExceptionPage/DeveloperExceptionPageMiddleware.cs"/></remarks>
+        </member>
+    </members>
+</doc>

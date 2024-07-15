@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BaGetter.Database.MySql</name>
+    </assembly>
+    <members>
+        <member name="T:BaGetter.Database.MySql.Migrations.UseCharSetLatin1">
+            <inheritdoc />
+        </member>
+        <member name="M:BaGetter.Database.MySql.Migrations.UseCharSetLatin1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BaGetter.Database.MySql.Migrations.UseCharSetLatin1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BaGetter.Database.MySql.Migrations.UseCharSetLatin1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="F:BaGetter.Database.MySql.MySqlContext.UniqueConstraintViolationErrorCode">
+            <summary>
+            The MySQL Server error code for when a unique constraint is violated.
+            </summary>
+        </member>
+        <member name="P:BaGetter.Database.MySql.MySqlContext.SupportsLimitInSubqueries">
+            <summary>
+            MySQL does not support LIMIT clauses in subqueries for certain subquery operators.
+            See: https://dev.mysql.com/doc/refman/8.0/en/subquery-restrictions.html
+            </summary>
+        </member>
+    </members>
+</doc>

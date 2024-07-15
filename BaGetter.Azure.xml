@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BaGetter.Azure</name>
+    </assembly>
+    <members>
+        <member name="T:BaGetter.Azure.AzureBlobStorageOptions">
+            <summary>
+            BaGetter's configurations to use Azure Blob Storage to store packages.
+            See: https://www.bagetter.com/docs/Installation/azure#azure-blob-storage
+            </summary>
+        </member>
+        <member name="P:BaGetter.Azure.AzureBlobStorageOptions.ConnectionString">
+            <summary>
+            The Azure Blob Storage connection string.
+            If provided, ignores <see cref="P:BaGetter.Azure.AzureBlobStorageOptions.AccountName"/> and <see cref="P:BaGetter.Azure.AzureBlobStorageOptions.AccessKey"/>.
+            </summary>
+        </member>
+        <member name="P:BaGetter.Azure.AzureBlobStorageOptions.AccountName">
+            <summary>
+            The Azure Blob Storage account name. Ignored if <see cref="P:BaGetter.Azure.AzureBlobStorageOptions.ConnectionString"/> is provided.
+            </summary>
+        </member>
+        <member name="P:BaGetter.Azure.AzureBlobStorageOptions.AccessKey">
+            <summary>
+            The Azure Blob Storage access key. Ignored if <see cref="P:BaGetter.Azure.AzureBlobStorageOptions.ConnectionString"/> is provided.
+            </summary>        
+        </member>
+        <member name="P:BaGetter.Azure.AzureBlobStorageOptions.Container">
+            <summary>
+            The Azure Blob Storage container name.
+            </summary>
+        </member>
+        <member name="T:BaGetter.Azure.PackageEntity">
+            <summary>
+            The Azure Table Storage entity that maps to a <see cref="T:BaGetter.Core.Package"/>.
+            The <see cref="P:Azure.Data.Tables.ITableEntity.PartitionKey"/> is the <see cref="P:BaGetter.Core.Package.Id"/> and
+            the <see cref="P:Azure.Data.Tables.ITableEntity.RowKey"/> is the <see cref="P:BaGetter.Core.Package.Version"/>.
+            </summary>
+        </member>
+        <member name="T:BaGetter.Azure.DependencyModel">
+            <summary>
+            A single item in <see cref="P:BaGetter.Azure.PackageEntity.Dependencies"/>.
+            </summary>
+        </member>
+        <member name="T:BaGetter.Azure.PackageTypeModel">
+            <summary>
+            A single item in <see cref="P:BaGetter.Azure.PackageEntity.PackageTypes"/>.
+            </summary>
+        </member>
+        <member name="T:BaGetter.Azure.PackageListingEntity">
+            <summary>
+            The Azure Table Storage entity to update the <see cref="P:BaGetter.Core.Package.Listed"/> column.
+            The <see cref="P:Azure.Data.Tables.ITableEntity.PartitionKey"/> is the <see cref="P:BaGetter.Core.Package.Id"/> and
+            the <see cref="P:Azure.Data.Tables.ITableEntity.RowKey"/> is the <see cref="P:BaGetter.Core.Package.Version"/>.
+            </summary>
+        </member>
+        <member name="T:BaGetter.Azure.PackageDownloadsEntity">
+            <summary>
+            The Azure Table Storage entity to update the <see cref="P:BaGetter.Core.Package.Downloads"/> column.
+            The <see cref="P:Azure.Data.Tables.ITableEntity.PartitionKey"/> is the <see cref="P:BaGetter.Core.Package.Id"/> and
+            the <see cref="P:Azure.Data.Tables.ITableEntity.RowKey"/> is the <see cref="P:BaGetter.Core.Package.Version"/>.
+            </summary>
+        </member>
+        <member name="T:BaGetter.Azure.TablePackageDatabase">
+            <summary>
+            Stores the metadata of packages using Azure Table Storage.
+            </summary>
+        </member>
+    </members>
+</doc>
